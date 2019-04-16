@@ -12,7 +12,9 @@
 
   <main role="main">
     <h1 class="cover-heading">Welcome to News Scraper for nytimes</h1>
-    <a class="btn btn-primary" href="/scrape">Scrape New Data</a>
+    <a class="btn btn-primary" href="/scrape">Scrape New Articles</a>
+        <a id="dataDelete" class="btn btn-primary">Delete Article Data</a>
+
 
 
 <!-- Modal -->
@@ -43,6 +45,7 @@
     </div>
   </div>
 </div>
+    <div id="Articles">
       {{#each Article}}
 
 
@@ -56,7 +59,7 @@
         </div>
       </div>
         {{/each}}
-      </div>
+    </div>
 
   </main>
 </div>

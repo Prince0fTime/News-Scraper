@@ -121,6 +121,15 @@ app.post("/noteDelete/:id", function (req, res) {
       res.json(err);
     });
 });
+//Route for Deleting all data
+app.post("/dataDelete", function (req, res) {
+  db.Article.collection.drop().catch(function (err) {
+      res.json(err);
+    });
+    db.Note.collection.drop().catch(function (err) {
+      res.json(err);
+    });
+});
 
 app.get("*", function(req, res) {
   res.render("404");

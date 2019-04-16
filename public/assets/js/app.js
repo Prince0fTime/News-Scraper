@@ -56,3 +56,13 @@ $(document).on("click", "#noteBtn", function () {
 
     });
 });
+$(document).on("click", "#dataDelete", function () {
+  $("#Articles").empty();
+  $.ajax({
+      method: "POST",
+      url: "/dataDelete"
+    }).catch(function (err) {
+      console.log(err);
+    });
+
+});
